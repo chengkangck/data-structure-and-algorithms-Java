@@ -4,19 +4,19 @@ import java.util.Arrays;
 
 public class InsertionSort {
     /**
-     * 插入排序：空间复杂度：O(1)
-     * 时间复杂度：O(n^2)
-     * @param arrs
+      * Insertion sort: space complexity: O(1)
+      * Time complexity: O(n^2)
+      * @param arrs
      */
     public static void sort(int [] arrs){
-        // 1、循环购买玩具：模拟玩具的增加过程
-        for (int i = 0; i < arrs.length; i++) { // 从左到右 --> 循环
-            // 2、对自己已有的玩具进行排序
-//            for(int j = 0; j < i; j++) { // 和循环同向-数据比较：部分数据位置错乱！-数据交换位置
-            for(int j = i-1; j >= 0; j--) { // 数据比较--> 从右往左
-                // 3、对玩具进行喜爱程度(数字大小)排序：交换数据--> 正确的结果
+        // 1、Buy toys in cycles: simulate the increase process of toys
+        for (int i = 0; i < arrs.length; i++) { // from left to right --> loop
+            // 2、Sort the toys you already have
+//            for(int j = 0; j < i; j++) { // Same direction as the loop-data comparison: some data is out of position! -Data exchange location
+            for(int j = i-1; j >= 0; j--) { // Data comparison --> from right to left
+                // 3、Sort toys by degree of favorite (number size): exchange data --> correct result
                 if (arrs[j] > arrs[j+1]) {
-                    // 交换数据/玩具
+                    // exchange data/toys
                     int temp = arrs[j];
                     arrs[j] = arrs[j+1];
                     arrs[j+1] = temp;
